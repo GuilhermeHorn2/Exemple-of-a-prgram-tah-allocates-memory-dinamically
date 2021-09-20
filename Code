@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+
+    // program that gets the media of a series of values with pointers
+    // remember that: if p is a pointer ---> p[i] = *(p + 1); 
+    
+    double media,*notas;
+    int i,n;
+    scanf("%d",&n);
+    //alocating dynamically
+    notas = malloc(n * sizeof(double));
+    //
+    if(notas == NULL){
+        printf("Theres no memory enough \n");
+        exit(1);
+    }
+    for(i = 0;i < n;i++){
+        scanf("%lf",&notas[i]);
+    }
+    media = 0;
+    for(i = 0; i < n;i++){
+        media += notas[i]/n;
+    }
+    printf("%d",media);
+    
+
+    return 0;
+}
+
