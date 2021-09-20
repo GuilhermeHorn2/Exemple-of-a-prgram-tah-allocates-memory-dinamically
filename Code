@@ -25,8 +25,7 @@ int main(){
         media += notas[i]/n;
     }
     printf("%d",media);
-    
+    free(notas);
 
     return 0;
 }
-
